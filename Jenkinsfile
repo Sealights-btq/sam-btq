@@ -8,8 +8,8 @@ pipeline {
   }
 
   environment {
-    machine_dns = '54.246.240.122'
-    SL_TOKEN = (sh(returnStdout: true, script:"aws secretsmanager get-secret-value --region eu-west-1 --secret-id 'btq/template_token' | jq -r '.SecretString' | jq -r '.template_token'" )).trim()
+    machine_dns = 'sam.btq.sealights.co'
+    SL_TOKEN = (sh(returnStdout: true, script:"aws secretsmanager get-secret-value --region eu-west-1 --secret-id 'btq/sam_token' | jq -r '.SecretString' | jq -r '.sam_token'" )).trim()
   }
 
 
@@ -58,7 +58,7 @@ pipeline {
           def IDENTIFIER= "${params.BRANCH}-${env.CURRENT_VERSION}"
           env.LAB_ID = create_lab_id(
           token: "${env.SL_TOKEN}",
-          machine: "https://dev-integration.dev.sealights.co",
+          machine: "https://poc-samantha.sealights.co",
           app: "${params.APP_NAME}",
           branch: "${params.BRANCH}",
           test_env: "${IDENTIFIER}",
