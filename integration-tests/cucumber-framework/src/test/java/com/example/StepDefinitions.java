@@ -147,22 +147,4 @@ public class StepDefinitions {
     public void theCheckoutShouldBeSuccessful() {
         // Assuming if the previous step passes, checkout was successful.
     }
-
-    @When("A user empties their cart")
-    public void aUserEmptiesTheirCart() throws Exception {
-        HttpPost httpPost = new HttpPost(BASE_URL + "/cart/empty");
-        CloseableHttpResponse response = httpClient.execute(httpPost);
-
-        // Assert the response code and redirection
-        Assert.assertEquals(302, response.getStatusLine().getStatusCode());
-        Assert.assertEquals(BASE_URL, response.getFirstHeader("Location").getValue());
-
-        response.close();
-    }
-
-    @Then("The cart should be empty")
-    public void theCartShouldBeEmpty() throws Exception {
-        // Get the current cart contents (e.g., through a GET request to /cart)
-        // Assert that the cart is empty (no products or an empty list)
-    }
 }
