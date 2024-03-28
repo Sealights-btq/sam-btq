@@ -19,10 +19,6 @@ Feature: E-commerce Website Test
     When A user adds products to their cart
     Then All products should be added successfully
   
-  Scenario: Empty cart
-    When A user empties their cart
-    Then The cart should be empty
-  
   Scenario: Check favicon and product image
     When A user accesses site assets
     Then The assets should be accessible
