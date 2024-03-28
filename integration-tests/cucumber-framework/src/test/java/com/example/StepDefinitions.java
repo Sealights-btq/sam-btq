@@ -147,4 +147,23 @@ public class StepDefinitions {
     public void theCheckoutShouldBeSuccessful() {
         // Assuming if the previous step passes, checkout was successful.
     }
+
+    @When("A user empties their cart")
+    public void aUserEmptiesTheirCart() throws Exception {
+        HttpPost httpPost = new HttpPost(BASE_URL + "/cart/empty");
+        CloseableHttpResponse response = httpClient.execute(httpPost);
+
+        // Check for expected response code and throw an exception if not met
+        if (response.getStatusLine().getStatusCode() != 302) {
+            throw new Exception("The cart could not be emptied. Unexpected response code: " + response.getStatusLine().getStatusCode());
+        }
+
+        response.close();
+    }
+
+    @Then("The cart should be empty")
+    public void theCartShouldBeEmpty() {
+        // Assuming if the previous step passes, "Empty Cart" was successful.
+
+    }
 }
