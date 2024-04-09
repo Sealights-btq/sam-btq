@@ -9,7 +9,8 @@ import (
 )
 
 var (
-	baseURL   = "http://10.2.10.105:8080" // Change this to your target URL
+	baseURL   = "http://sam.btq.sealights.co:8081" // Change this to your target URL http://sam.btq.sealights.co:8081
+
 	userAgent = "Vegeta Load Tester"
 )
 
@@ -33,7 +34,7 @@ func main() {
 	fmt.Printf("99th percentile response time: %.2f ms\n", metrics.Latencies.P99.Seconds()*1000)
 	fmt.Printf("Max response time: %.2f ms\n", metrics.Latencies.Max.Seconds()*1000)
 	fmt.Printf("Total requests: %d\n", metrics.Requests)
-	fmt.Printf("Total errors: %d\n", metrics.Errors)
+	fmt.Printf("Total errors: %s\n", metrics.Errors)
 }
 
 func newCustomTargeter() vegeta.Targeter {
