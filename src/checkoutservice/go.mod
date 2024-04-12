@@ -1,6 +1,6 @@
 module github.com/GoogleCloudPlatform/microservices-demo/src/checkoutservice
 
-go 1.19
+go 1.19.13
 
 require (
 	cloud.google.com/go/profiler v0.3.1
