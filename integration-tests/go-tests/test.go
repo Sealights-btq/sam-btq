@@ -9,11 +9,9 @@ import (
 )
 
 var (
-	baseURL   = "http://sam.btq.sealights.co:8081" // Change this to your target URL http://sam.btq.sealights.co:8081
-
+	baseURL   = "http://10.2.10.105:8080" // Change this to your target URL
 	userAgent = "Vegeta Load Tester"
 )
-
 func main() {
 	rate := vegeta.Rate{Freq: 10, Per: time.Second}
 	duration := 1 * time.Minute
