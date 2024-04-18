@@ -12,7 +12,6 @@ var (
 	baseURL   = "http://10.2.10.105:8080" // Change this to your target URL
 	userAgent = "Vegeta Load Tester"
 )
-
 func main() {
 	rate := vegeta.Rate{Freq: 10, Per: time.Second}
 	duration := 1 * time.Minute
@@ -33,7 +32,7 @@ func main() {
 	fmt.Printf("99th percentile response time: %.2f ms\n", metrics.Latencies.P99.Seconds()*1000)
 	fmt.Printf("Max response time: %.2f ms\n", metrics.Latencies.Max.Seconds()*1000)
 	fmt.Printf("Total requests: %d\n", metrics.Requests)
-	fmt.Printf("Total errors: %d\n", metrics.Errors)
+	fmt.Printf("Total errors: %s\n", metrics.Errors)
 }
 
 func newCustomTargeter() vegeta.Targeter {
