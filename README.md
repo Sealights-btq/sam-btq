@@ -27,6 +27,7 @@ If you’re using this demo, please **★Star** this repository to show your int
 ## Interactive quickstart (GKE)
 
 [![Open in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://ssh.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2FGoogleCloudPlatform%2Fmicroservices-demo&shellonly=true&cloudshell_image=gcr.io/ds-artifacts-cloudshell/deploystack_custom_image)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FSealights-btq%2Fsam-btq.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FSealights-btq%2Fsam-btq?ref=badge_shield)
 
 ## Quickstart (GKE)
 
@@ -199,3 +200,7 @@ See the [Development guide](/docs/development-guide.md) to learn how to run and 
 ---
 
 This is not an official Google project.
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FSealights-btq%2Fsam-btq.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FSealights-btq%2Fsam-btq?ref=badge_large)
