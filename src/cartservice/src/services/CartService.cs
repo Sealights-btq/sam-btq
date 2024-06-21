@@ -34,8 +34,12 @@ namespace cartservice.services
         public async override Task<Empty> AddItem(AddItemRequest request, ServerCallContext context)
         {
             await _cartStore.AddItemAsync(request.UserId, request.Item.ProductId, request.Item.Quantity);
+            _ = DoNothing(); // discard operation
             return Empty;
         }
+
+        // add an empty function that doesn't do anything:
+        private void DoNothing() { }
 
         public override Task<Cart> GetCart(GetCartRequest request, ServerCallContext context)
         {
