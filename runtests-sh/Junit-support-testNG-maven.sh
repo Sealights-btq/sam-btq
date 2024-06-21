@@ -9,7 +9,7 @@ echo  '{
   "runFunctionalTests": true,
   "labId": "${SL_LABID}",
   "proxy": null,
-  "logEnabled": false,
+  "logEnabled": true,
   "logDestination": "console",
   "logLevel": "warn",
   "sealightsJvmParams": {}
