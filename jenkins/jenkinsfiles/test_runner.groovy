@@ -223,7 +223,7 @@ pipeline {
                               "runFunctionalTests": true,
                               "labId": "${params.SL_LABID}",
                               "proxy": null,
-                              "logEnabled": false,
+                              "logEnabled": true,
                               "logDestination": "console",
                               "logLevel": "info",
                               "sealightsJvmParams": {}
