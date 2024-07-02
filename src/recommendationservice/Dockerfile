@@ -26,7 +26,7 @@ COPY --from=builder /usr/local/lib/python3.10/ /usr/local/lib/python3.10/
 WORKDIR /recommendationservice
 COPY . .
 #Get the build session id
-RUN sl-python config --appname recommendationservice --branchname ${BRANCH} --buildname ${BUILD_NAME} --workspacepath ./ --token ${SEALIGHTS_TOKEN} --exclude "*grpc*", "*tests*"
+RUN sl-python config --appname recommendationservice --branchname ${BRANCH} --buildname ${BUILD_NAME} --workspacepath ./ --token ${SEALIGHTS_TOKEN} --exclude ["*grpc*", "*tests*"]
 #Scan the code
 RUN sl-python scan --scm none --token ${SEALIGHTS_TOKEN}
 #COPY --from=builder /recommendationservice/buildSessionId.txt .
