@@ -133,7 +133,10 @@ func (plat *platformDetails) setPlatformDetails(env string) {
 	}  else if env == "svgtest" {
 		plat.provider = "svg-test"
 		plat.css = "svgtest-platform"
-	} else if env == "azure" {
+	}  else if env == "svgtest2" {
+		plat.provider = "svg-test2"
+		plat.css = "svgtest-platform"
+	}  else if env == "azure" {
 		plat.provider = "Azure"
 		plat.css = "azure-platform"
 	} else if env == "gcp" {
@@ -164,10 +167,10 @@ func (fe *frontendServer) productHandler(w http.ResponseWriter, r *http.Request)
 		return
 	}
 	currencies, err := fe.getCurrencies(r.Context())
-	if err != nil {
-		renderHTTPError(log, r, w, errors.Wrap(err, "could not retrieve currencies"), http.StatusInternalServerError)
-		return
-	}
+	// if err != nil {
+	// 	renderHTTPError(log, r, w, errors.Wrap(err, "could not retrieve currencies"), http.StatusInternalServerError)
+	// 	return
+	// }
 
 	cart, err := fe.getCart(r.Context(), sessionID(r))
 	if err != nil {
