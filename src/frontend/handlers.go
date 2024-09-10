@@ -130,6 +130,9 @@ func (plat *platformDetails) setPlatformDetails(env string) {
 	} else if env == "onprem" {
 		plat.provider = "On-Premises"
 		plat.css = "onprem-platform"
+	}  else if env == "svgtest" {
+		plat.provider = "svg-test"
+		plat.css = "svgtest-platform"
 	} else if env == "azure" {
 		plat.provider = "Azure"
 		plat.css = "azure-platform"
